@@ -1,12 +1,26 @@
+import { useContext } from "react";
 import { Link } from "react-router-dom";
-
+import { AuthContext } from "../../AuthProvider/AuthProvider";
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const Login = () => {
+    const {signInUser}=useContext(AuthContext)
     const handleLogin=e=>{
         e.preventDefault()
         const email=e.target.email.value
         const password=e.target.password.value
-        console.log(email,password)
+        
+        // login user
+        signInUser(email,password)
+        .then((result)=>{
+            console.log(result.user)
+            toast('user login successfully')
+        })
+        .catch((error)=>{
+            console.log(error)
+        })
+
     }
     return (
         <div className="hero min-h-screen">
@@ -38,6 +52,7 @@ const Login = () => {
               <p className="text-base text-center font-normal text-[#403F3F]">New user please can be? <Link className="font-bold" to="/register"><button className="btn btn-link">Register</button></Link></p>
               
             </form>
+            <ToastContainer/>
           </div>
         </div>
       </div>

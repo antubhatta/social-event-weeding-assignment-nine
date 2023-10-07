@@ -1,4 +1,4 @@
-import { useContext } from "react";
+import { useContext, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { AuthContext } from "../../AuthProvider/AuthProvider";
 import { ToastContainer, toast } from 'react-toastify';
@@ -17,11 +17,15 @@ const Login = () => {
         createUser(email,password)
         .then((result)=>{
             console.log(result.user)
-            toast('user added successfully')
+            toast('user registration successfully')
         })
         .catch((error)=>{
             console.log(error)
         })
+
+        useEffect(()=>{
+            
+        },[])
     }
     return (
         <div className="hero min-h-screen">

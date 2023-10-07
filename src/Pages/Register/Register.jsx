@@ -1,4 +1,4 @@
-import { useContext, useEffect } from "react";
+import { useContext } from "react";
 import { Link } from "react-router-dom";
 import { AuthContext } from "../../AuthProvider/AuthProvider";
 import { ToastContainer, toast } from 'react-toastify';
@@ -23,9 +23,6 @@ const Login = () => {
             console.log(error)
         })
 
-        useEffect(()=>{
-            
-        },[])
     }
     return (
         <div className="hero min-h-screen">

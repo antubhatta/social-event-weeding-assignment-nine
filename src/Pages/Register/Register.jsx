@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { AuthContext } from "../../AuthProvider/AuthProvider";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import { updateProfile } from "firebase/auth";
 
 const Login = () => {
     const {createUser} =useContext(AuthContext)
@@ -28,6 +29,17 @@ const Login = () => {
         .then((result)=>{
             console.log(result.user)
             toast('user registration successfully')
+
+            updateProfile(result.user,{
+              displayName: name,
+              photoURL:photo
+            })
+            .then(()=>{
+              console.log('profile updated')
+            })
+            .catch((error)=>{
+              console.log(error)
+            })
         })
         .catch((error)=>{
             console.log(error)
@@ -35,10 +47,10 @@ const Login = () => {
 
     }
     return (
-        <div className="hero min-h-screen">
+        <div className="hero min-h-screen bg-gradient-to-br from-purple-500 to-indigo-600">
         <div className="hero-content flex-col">
           <div className="text-center ">
-            <h1 className="text-xl mt-12 text-[#403F3F] font-bold mb-4">Register your Account</h1>
+            <h1 className="text-xl mt-12 text-[#FFF] font-bold mb-4">Register your Account</h1>
         
           </div>
           <div className="card flex-shrink-0 w-[300px] md:w-full shadow-2xl bg-base-100 ">
@@ -71,7 +83,7 @@ const Login = () => {
                 </label>
               </div>
               <div className="form-control mt-6">
-                <button className="py-4 rounded-md text-white bg-blue-700 w-auto md:w-[400px]">Login</button>
+                <button className="py-4 rounded-md text-white bg-blue-700 w-auto md:w-[400px]">Register</button>
               </div>
               <p className="text-base text-center font-normal text-[#403F3F]">Already have an account? <Link className="font-bold" to="/login"><button className="btn btn-link">Login</button></Link></p>
               

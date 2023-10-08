@@ -1,6 +1,7 @@
 import { useContext } from "react";
 import { Link, NavLink } from "react-router-dom";
 import { AuthContext } from "../AuthProvider/AuthProvider";
+import logo from "../assets/ringlogo@2x-free-img.png"
 
 
 
@@ -10,9 +11,11 @@ const Navbar = () => {
 
     const navLinks = <>
         <li><NavLink to="/">Home</NavLink></li>
-        <li><NavLink to="/about">About</NavLink></li>
         <li><NavLink to="/login">Login</NavLink></li>
         <li><NavLink to="/register">Register</NavLink></li>
+        {
+            user && 
+        }
 
     </>
     const handleLogOut=()=>{
@@ -20,7 +23,7 @@ const Navbar = () => {
     }
 
     return (
-        <div className="shadow-lg">
+        <div className="bg-gray-300">
           <div className="navbar container mx-auto">
           <div className="navbar-start">
                 <div className="dropdown">
@@ -31,7 +34,7 @@ const Navbar = () => {
                         {navLinks}
                     </ul>
                 </div>
-                <Link to="/" className=" normal-case text-2xl font-bold">Wedding</Link>
+                <Link to="/" className=" normal-case text-2xl font-bold"><img className="h-[60px] w-[140px]" src={logo} alt="" /></Link>
             </div>
             <div className="navbar-center hidden lg:flex">
                 <ul className="menu text-base menu-horizontal px-1">

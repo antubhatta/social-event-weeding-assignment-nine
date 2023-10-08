@@ -13,6 +13,16 @@ const Login = () => {
         const email=e.target.email.value
         const password=e.target.password.value
         console.log(name,photo,email,password)
+
+        if(password.length<6){
+          toast('Your Password must be 6 character or above')
+          return;
+      }
+      else if(!/[A-Z]/.test(password)){
+          toast('your password must be one character in uppercase')
+          return;
+      }
+     
         // creating a new user
         createUser(email,password)
         .then((result)=>{

@@ -5,11 +5,13 @@ import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
 const Login = () => {
+   
     const {signInUser}=useContext(AuthContext)
     const handleLogin=e=>{
         e.preventDefault()
         const email=e.target.email.value
         const password=e.target.password.value
+
         
         // login user
         signInUser(email,password)
@@ -19,6 +21,7 @@ const Login = () => {
         })
         .catch((error)=>{
             console.log(error)
+            toast(error.message)
         })
 
     }

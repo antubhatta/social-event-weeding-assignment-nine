@@ -14,6 +14,7 @@ import Register from './Pages/Register/Register';
 import AuthProvider from './AuthProvider/AuthProvider';
 import ErrorPage from './Components/ErrorPage';
 import ServiceDetails from './Pages/ServiceDetails/ServiceDetails';
+import PrivateRoute from './Components/PrivateRoute';
 
 const router = createBrowserRouter([
   {
@@ -28,7 +29,7 @@ const router = createBrowserRouter([
       },
       {
         path: "/service/:id",
-        element: <ServiceDetails></ServiceDetails>,
+        element: <PrivateRoute><ServiceDetails></ServiceDetails></PrivateRoute>,
         loader:()=>fetch('../wedding.json')
       },
       {

@@ -1,4 +1,4 @@
-import banner from "../../assets/pexels-pixabay-59948.jpg"
+import banner from "../../assets/istockphoto-1127706701-1024x1024.jpg"
 import queen from "../../assets/pic10-free-img.png"
 const Banner = () => {
     return (

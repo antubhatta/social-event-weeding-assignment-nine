@@ -14,7 +14,10 @@ const Navbar = () => {
         <li><NavLink to="/login">Login</NavLink></li>
         <li><NavLink to="/register">Register</NavLink></li>
         {
-            user && 
+            user && <>
+            <li><NavLink to="/about">About</NavLink></li>
+            <li><NavLink to="/contact">Contact</NavLink></li>
+            </>
         }
 
     </>
@@ -47,7 +50,7 @@ const Navbar = () => {
              {
                 user ? 
                 <button onClick={handleLogOut} className="px-5 py-2 rounded-lg text-white text-base bg-slate-600">LogOut</button> :
-                <button className="px-5 py-2 rounded-lg text-white text-base bg-slate-600">LogIn</button>
+                <Link to="/login"><button className="px-5 py-2 rounded-lg text-white text-base bg-slate-600">LogIn</button></Link>
              }
 
             </div>

@@ -4,6 +4,7 @@ import './index.css'
 import Root from './Layout/Root';
 import Home from './Pages/Home/Home';
 import Login from './Pages/Login/Login';
+import Contact from './Pages/Contact/Contact';
 
 import {
   createBrowserRouter,
@@ -15,6 +16,7 @@ import AuthProvider from './AuthProvider/AuthProvider';
 import ErrorPage from './Components/ErrorPage';
 import ServiceDetails from './Pages/ServiceDetails/ServiceDetails';
 import PrivateRoute from './Components/PrivateRoute';
+import About from './Pages/About/About';
 
 const router = createBrowserRouter([
   {
@@ -39,6 +41,14 @@ const router = createBrowserRouter([
       {
         path:"/register",
         element: <Register></Register>
+      },
+      {
+        path:"/about",
+        element: <About></About>
+      },
+      {
+        path:"/contact",
+        element: <Contact></Contact>
       }
     ]
   },

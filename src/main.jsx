@@ -13,6 +13,7 @@ import "./index.css";
 import Register from './Pages/Register/Register';
 import AuthProvider from './AuthProvider/AuthProvider';
 import ErrorPage from './Components/ErrorPage';
+import ServiceDetails from './Pages/ServiceDetails/ServiceDetails';
 
 const router = createBrowserRouter([
   {
@@ -23,7 +24,12 @@ const router = createBrowserRouter([
       {
         path: "/",
         element: <Home></Home>,
-        loader:()=>fetch('wedding.json')
+        loader:()=>fetch('../wedding.json')
+      },
+      {
+        path: "/service/:id",
+        element: <ServiceDetails></ServiceDetails>,
+        loader:()=>fetch('../wedding.json')
       },
       {
         path: "/login",

@@ -1,39 +1,44 @@
 [
-    {
-      "title": "Photography Package",
-      "img": "https://i.ibb.co/5rjSG1V/photography-camera-learning-feature.webp",
-      "price": "$1,500",
-      "description": "Capture your special day with our professional photography package. Includes full-day coverage, edited high-resolution images, and a photo album."
-    },
-    {
-      "title": "Venue Rental",
-      "img": "https://i.ibb.co/8Kj9rpJ/62ed4a6a17fa6378798911df-Cover-2400w.jpg",
-      "price": "$3,000",
-      "description": "Rent our beautiful and spacious venue for your wedding ceremony and reception. Includes setup, tables, chairs, and basic decor."
-    },
-    {
-      "title": "Floral Arrangements",
-      "img": "https://i.ibb.co/bzkm254/kateryna-tyshkul.jpg",
-      "price": "$800",
-      "description": "Elevate your wedding decor with our exquisite floral arrangements. We offer bouquets, centerpieces, and ceremony flowers."
-    },
-    {
-      "title": "Catering Services",
-      "img": "https://i.ibb.co/NtCXspt/226-2269356-catering-services-in-sri-lanka-hd-png-download.png",
-      "price": "$2,500",
-      "description": "Delight your guests with our gourmet catering services. We offer a diverse menu, including appetizers, entrees, and desserts."
-    },
-    {
-      "title": "DJ and Entertainment",
-      "img": "https://i.ibb.co/0Df4Gdd/Equipment-of-a-Wedding-DJ-1-1024x683.jpg",
-      "price": "$1,200",
-      "description": "Keep the party going with our experienced DJ and entertainment services. We'll create the perfect playlist for your reception."
-    },
-    {
-      "title": "Wedding Planning Package",
-      "img": "https://i.ibb.co/zbfhNgC/Wedding-Planning.png",
-      "price": "$2,800",
-      "description": "Let us take care of all the details with our comprehensive wedding planning package. From invitations to logistics, we've got you covered."
-    }
-  ]
-  
+  {
+    "id": "1",
+    "title": "Photography Package",
+    "img": "https://i.ibb.co/5rjSG1V/photography-camera-learning-feature.webp",
+    "price": "$1,500",
+    "description": "Capture your special day with our professional photography package. Includes full-day coverage, edited high-resolution images, and a photo album."
+  },
+  {
+    "id": "2",
+    "title": "Venue Rental",
+    "img": "https://i.ibb.co/8Kj9rpJ/62ed4a6a17fa6378798911df-Cover-2400w.jpg",
+    "price": "$3,000",
+    "description": "Rent our beautiful and spacious venue for your wedding ceremony and reception. Includes setup, tables, chairs, and basic decor."
+  },
+  {
+    "id": "3",
+    "title": "Floral Arrangements",
+    "img": "https://i.ibb.co/bzkm254/kateryna-tyshkul.jpg",
+    "price": "$800",
+    "description": "Elevate your wedding decor with our exquisite floral arrangements. We offer bouquets, centerpieces, and ceremony flowers."
+  },
+  {
+    "id": "4",
+    "title": "Catering Services",
+    "img": "https://i.ibb.co/NtCXspt/226-2269356-catering-services-in-sri-lanka-hd-png-download.png",
+    "price": "$2,500",
+    "description": "Delight your guests with our gourmet catering services.We offer a diverse menu, including mouthwatering appetizers, delicious entrees."
+  },
+  {
+    "id": "5",
+    "title": "DJ and Entertainment",
+    "img": "https://i.ibb.co/0Df4Gdd/Equipment-of-a-Wedding-DJ-1-1024x683.jpg",
+    "price": "$1,200",
+    "description": "Keep the party going with our experienced DJ and entertainment services. We'll create the perfect playlist for your reception celebration and dancing joyfully."
+  },
+  {
+    "id": "6",
+    "title": "Wedding Planning Package",
+    "img": "https://i.ibb.co/zbfhNgC/Wedding-Planning.png",
+    "price": "$2,800",
+    "description": "Let us take care of all the details with our comprehensive wedding planning package. From invitations to logistics, we've got you covered."
+  }
+]

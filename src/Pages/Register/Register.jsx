@@ -4,9 +4,10 @@ import { AuthContext } from "../../AuthProvider/AuthProvider";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { updateProfile } from "firebase/auth";
+import { FaGithub, FaGoogle } from 'react-icons/fa';
 
 const Login = () => {
-    const {createUser} =useContext(AuthContext)
+    const {createUser,googleLogin,gitHubLogin} =useContext(AuthContext)
     const handleRegister=e=>{
         e.preventDefault()
         const name=e.target.name.value
@@ -22,6 +23,10 @@ const Login = () => {
       else if(!/[A-Z]/.test(password)){
           toast('your password must be one character in uppercase')
           return;
+      }
+      else if(!/[!@#$%^&*()_+{}[\]:;<>,.?~\\-]/.test(password)){
+        toast('your password must be one special character')
+        return
       }
      
         // creating a new user
@@ -45,6 +50,26 @@ const Login = () => {
             console.log(error)
         })
 
+    }
+    // login google
+    const handleGoogleLogin=()=>{
+      googleLogin()
+    .then((result)=>{
+      console.log(result.user)
+    })
+    .catch((error)=>{
+      console.log(error)
+    })
+    }
+    // login github
+    const handleGithubLogin=()=>{
+      gitHubLogin()
+      .then((result)=>{
+        console.log(result.user)
+      })
+      .catch((error)=>{
+        console.log(error)
+      })
     }
     return (
         <div className="hero min-h-screen bg-gradient-to-br from-purple-500 to-indigo-600">
@@ -84,6 +109,18 @@ const Login = () => {
               </div>
               <div className="form-control mt-6">
                 <button className="py-4 rounded-md text-white bg-blue-700 w-auto md:w-[400px]">Register</button>
+              </div>
+              <p className="text-sm text-center mt-2 divider">Or with google and github</p>
+              <div className="flex justify-between">
+              <button onClick={handleGoogleLogin} className="px-5 py-3 btn-sm text-base flex items-center gap-1 rounded-lg bg-gray-600 text-white">
+                    <FaGoogle></FaGoogle>
+                    <p>Google</p>
+                </button>
+                <button onClick={handleGithubLogin} className="px-5 py-3 btn-sm text-base flex items-center gap-1 rounded-lg bg-gray-600 text-white">
+                    <FaGithub></FaGithub>
+                    <p>Github</p>
+                </button>
+
               </div>
               <p className="text-base text-center font-normal text-[#403F3F]">Already have an account? <Link className="font-bold" to="/login"><button className="btn btn-link">Login</button></Link></p>
               

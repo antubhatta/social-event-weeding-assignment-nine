@@ -30,6 +30,7 @@ const AuthProvider = ({children}) => {
     const gitHubLogin=()=>{
         return signInWithPopup(auth,gitHubProvider)
     }
+   
 
     // observer the current user
     useEffect(()=>{

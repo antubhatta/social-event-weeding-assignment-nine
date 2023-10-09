@@ -81,7 +81,7 @@ const Login = () => {
                 </label>
               </div>
               <div className="form-control mt-6">
-                <button className="py-4 rounded-md text-white bg-blue-700 w-auto md:w-[400px]">Login</button>
+              <button className="py-4 rounded-md text-white bg-gradient-to-r from-blue-500 via-blue-700 to-blue-900 w-auto md:w-[400px]">Login</button>
               </div>
               <p className="text-sm text-center mt-2 divider">Or with google and github</p>
               <div className="flex justify-between">

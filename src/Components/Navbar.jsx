@@ -1,7 +1,8 @@
 import { useContext } from "react";
 import { Link, NavLink } from "react-router-dom";
 import { AuthContext } from "../AuthProvider/AuthProvider";
-import logo from "../assets/ringlogo@2x-free-img.png"
+import User from "./User";
+
 
 
 
@@ -26,7 +27,7 @@ const Navbar = () => {
     }
 
     return (
-        <div className="bg-gray-300">
+        <div className="shadow-xl">
           <div className="navbar container mx-auto">
           <div className="navbar-start">
                 <div className="dropdown">
@@ -37,7 +38,7 @@ const Navbar = () => {
                         {navLinks}
                     </ul>
                 </div>
-                <Link to="/" className=" normal-case text-2xl font-bold"><img className="h-[60px] w-[140px]" src={logo} alt="" /></Link>
+                <Link to="/" className=" normal-case text-2xl font-bold"><p className="" >Weeding</p></Link>
             </div>
             <div className="navbar-center hidden lg:flex">
                 <ul className="menu text-base menu-horizontal px-1">
@@ -49,7 +50,9 @@ const Navbar = () => {
           
              {
                 user ? 
-                <button onClick={handleLogOut} className="px-5 py-2 rounded-lg text-white text-base bg-slate-600">LogOut</button> :
+                <>
+                <User/>
+                <button onClick={handleLogOut} className="px-5 py-2 rounded-lg text-white text-base bg-slate-600">LogOut</button> </>:
                 <Link to="/login"><button className="px-5 py-2 rounded-lg text-white text-base bg-slate-600">LogIn</button></Link>
              }
 

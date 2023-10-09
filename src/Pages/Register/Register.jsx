@@ -7,14 +7,14 @@ import { updateProfile } from "firebase/auth";
 import { FaGithub, FaGoogle } from 'react-icons/fa';
 
 const Login = () => {
-    const {createUser,googleLogin,gitHubLogin} =useContext(AuthContext)
+    const {createUser,googleLogin,gitHubLogin,setLoading} =useContext(AuthContext)
     const handleRegister=e=>{
         e.preventDefault()
         const name=e.target.name.value
         const photo=e.target.photo.value
         const email=e.target.email.value
         const password=e.target.password.value
-        console.log(name,photo,email,password)
+        // console.log(name,photo,email,password)
 
         if(password.length<6){
           toast('Your Password must be 6 character or above')
@@ -34,8 +34,8 @@ const Login = () => {
         .then((result)=>{
             console.log(result.user)
             toast('user registration successfully')
-
-            console.log(photo)
+           e.target.reset()
+            // console.log(photo)
 
             updateProfile(result.user,{
               displayName: name,
@@ -46,10 +46,14 @@ const Login = () => {
             })
             .catch((error)=>{
               console.log(error)
+              
+            }).finally(() => {
+              setLoading(false)
             })
         })
         .catch((error)=>{
             console.log(error)
+            toast(error.message)
         })
 
     }

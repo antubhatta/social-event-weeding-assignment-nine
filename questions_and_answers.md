@@ -18,10 +18,10 @@ console.log(greetign);
 <details><summary><b>Answer</b></summary>
 <p>
 
-#### Answer: ?
+#### Answer: ReferenceError: greetign is not defined.
 
 <i>Write your explanation here</i>
-
+In the code provided, there's a typo in the variable declaration. Instead of "greeting," you have "greetign," which is not defined. As a result, you will get a ReferenceError because JavaScript is unable to find a variable named "greetign."
 </p>
 </details>
 
@@ -43,10 +43,10 @@ sum(1, "2");
 <details><summary><b>Answer</b></summary>
 <p>
 
-#### Answer: ?
+#### Answer: 3
 
 <i>Write your explanation here</i>
-
+In the sum function, it's defined to take two parameters a and b and return their sum. When you call sum(1, "2"), JavaScript will try to perform type coercion and convert the string "2" to a number, resulting in the addition of 1 + 2, which equals 3. Therefore, the result of this function call is 3.
 </p>
 </details>
 
@@ -69,10 +69,10 @@ console.log(food);
 <details><summary><b>Answer</b></summary>
 <p>
 
-#### Answer: ?
+#### Answer:  ['🍕', '🍫', '🥑', '🍔'].
 
 <i>Write your explanation here</i>
-
+The food array remains the same throughout the code. The info.favoriteFood property is updated to "🍝," but this change does not affect the original food array. So, when you log food, it still contains ['🍕', '🍫', '🥑', '🍔'].
 </p>
 </details>
 
@@ -94,10 +94,10 @@ console.log(sayHi());
 <details><summary><b>Answer</b></summary>
 <p>
 
-#### Answer: ?
+#### Answer: Hi there, undefined
 
 <i>Write your explanation here</i>
-
+In the sayHi function, there is a parameter name which is not given a default value. When you call sayHi() without providing any arguments, name is undefined because no value is passed for it. Therefore, the function returns "Hi there, undefined" where undefined represents the value of the missing argument.
 </p>
 </details>
 
@@ -122,9 +122,9 @@ console.log(count);
 <details><summary><b>Answer</b></summary>
 <p>
 
-#### Answer: ?
+#### Answer: 2
 
 <i>Write your explanation here</i>
-
+In the provided code, the forEach method iterates through the nums array and executes the callback function for each element. Inside the callback, there's an if statement that checks if the current num is truthy. Only the numbers 1, 2, and 3 are truthy in JavaScript, so for each of these values, count is incremented by 1. Therefore, count ends up being 2 because there are two truthy values (1 and 2) in the array.
 </p>
 </details>

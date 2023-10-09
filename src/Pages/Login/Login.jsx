@@ -8,7 +8,7 @@ import { FaGithub, FaGoogle } from 'react-icons/fa';
 
 const Login = () => {
    
-    const {signInUser,googleLogin,gitHubLogin}=useContext(AuthContext)
+    const {signInUser,googleLogin,gitHubLogin,setLoading}=useContext(AuthContext)
     const location=useLocation()
     const navigate =useNavigate()
    
@@ -22,16 +22,20 @@ const Login = () => {
         signInUser(email,password)
         .then((result)=>{
             console.log(result.user)
-            toast('user login successfully')
-           
+            
             // navigate after login
             navigate(location?.state ? location.state : '/')
+            toast('user login successfully')
+           
+           
            
 
         })
         .catch((error)=>{
             console.log(error)
             toast(error.message)
+        }).finally(() => {
+          setLoading(false)
         })
      
     }
@@ -40,6 +44,10 @@ const Login = () => {
         googleLogin()
       .then((result)=>{
         console.log(result.user)
+        navigate(location?.state ? location.state : '/')
+        toast('user login successfully')
+        
+       
       })
       .catch((error)=>{
         console.log(error)
@@ -50,6 +58,8 @@ const Login = () => {
         gitHubLogin()
         .then((result)=>{
           console.log(result.user)
+          navigate(location?.state ? location.state : '/')
+          toast('user login successfully')
         })
         .catch((error)=>{
           console.log(error)

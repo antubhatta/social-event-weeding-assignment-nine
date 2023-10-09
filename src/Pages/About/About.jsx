@@ -3,9 +3,9 @@
 const About = () => {
     return (
         <div className="bg-gray-100 min-h-screen">
-      <div className="py-16 px-4 sm:px-6 lg:px-8 text-center">
-        <h1 className="text-4xl font-extrabold text-gray-800">About Our Wedding Management System</h1>
-        <p className="mt-4 text-xl text-gray-600">
+      <div className="py-8 md:py-12 lg:py-16 px-4 sm:px-6 lg:px-8 text-center">
+        <h1 className="text-xl md:text-2xl lg:text-4xl font-extrabold text-gray-800">About Our Wedding Management System</h1>
+        <p className="mt-4 text-lg md:text-xl text-gray-600">
           Making your dream wedding a reality.
         </p>
       </div>
